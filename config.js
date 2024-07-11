@@ -1,0 +1,41 @@
+global.owner = ['94704029017']  
+global.mods = ['94704029017'] 
+global.prems = ['94704029017']
+global.nameowner = 'Supuna'
+global.numberowner = '94704029017' 
+global.mail = 'support@botkingdom.lk' 
+global.gc = 'https://chat.whatsapp.com/DNUr9fAAaTq6YW3SFQHX7Q'
+global.instagram = 'https://chat.whatsapp.com/DNUr9fAAaTq6YW3SFQHX7Q'
+global.wm = '© botkingdom'
+global.wait = '𝙿𝙻𝙴𝙰𝚂𝙴 𝚠𝚊𝚒𝚝'
+global.eror = '_*Server Error*_'
+global.stiker_wait = '*⫹⫺ 𝚙𝚕𝚎𝚊𝚜𝚎 𝚠𝚊𝚒𝚝...*'
+global.packname = 'Made With'
+global.author = 'Botkingdom'
+global.autobio = false // Set true untuk mengaktifkan autobio
+global.maxwarn = '2' // Peringatan maksimum
+
+//INI WAJIB DI ISI!//
+global.btc = 'islFQZJb' 
+//Daftar terlebih dahulu https://api.botcahx.eu.org
+
+//INI OPTIONAL BOLEH DI ISI BOLEH JUGA ENGGA//
+global.lann = 'MBIwoOic'
+//Daftar https://api.betabotz.eu.org 
+
+global.APIs = {   
+  btc: 'https://api.botcahx.eu.org'
+}
+global.APIKeys = { 
+  'https://api.botcahx.eu.org': 'APIKEY' 
+}
+
+let fs = require('fs')
+let chalk = require('chalk')
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+  fs.unwatchFile(file)
+  console.log(chalk.redBright("Update 'config.js'"))
+  delete require.cache[file]
+  require(file)
+})
