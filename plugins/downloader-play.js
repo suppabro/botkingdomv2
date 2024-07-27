@@ -6,7 +6,7 @@ let handler = async (m, { conn, text, usedPrefix }) => {
     try {
         const look = await search(text);
         const convert = look.videos[0];
-        if (!convert) throw 'Video/Audio Tidak Ditemukan';
+        if (!convert) throw 'Video/Audio සොයා ගත නොහැක';
         if (convert.seconds >= 3600) {
             return conn.reply(m.chat, 'Video is longer than 1 hour!', m);
         } else {
